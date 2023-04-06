@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>カテゴリ一覧</h1>
+    <a href="{{ url_for('category.create') }}">新規カテゴリ作成</a>
+    <ul>
+    {% for category in categories %}
+        <li>{{ category['categoryname'] }}
+            <a href="{{ url_for('category.edit', category_id=category.id) }}">編集</a>
+            <form method="post" action="{{ url_for('category.delete', category_id=category.id) }}">
+                <button type="submit">削除</button>
+            </form>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

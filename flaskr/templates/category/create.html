@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>新規カテゴリ作成</h1>
+    <form method="post" action="{{ url_for('category.create') }}">
+        <label for="categoryname">カテゴリ名:</label>
+        <input type="text" id="name" name="categoryname" required>
+        <button type="submit">作成</button>
+    </form>
+{% endblock %}

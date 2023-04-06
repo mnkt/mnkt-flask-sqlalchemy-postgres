@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{{ post['categoryname'] }} を編集</h1>
+    <form method="post" action="{{ url_for('category.edit', category_id=category.id) }}">
+        <label for="categoryname">カテゴリ名:</label>
+        <input type="text" id="name" name="categoryname" value="{{ category['categoryname'] }}" required>
+        <button type="submit">更新</button>
+    </form>
+{% endblock %}
