@@ -1,7 +1,8 @@
 boto3
-Flask-S3
-Flask-SQLAlchemy
+flask-s3
+flask-sqlalchemy
 psycopg2-binary
 python-dotenv
-Flask-Login
+flask-Login
 flask-migrate
+gunicorn
